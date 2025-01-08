@@ -17,7 +17,7 @@ const Notification: React.FC = () => {
   ];
 
   return (
-    <div className="flex min-h-screen pb-14 bg-gradient-to-b from-navy via-red-500 to-red-700">
+    <div className="flex min-h-screen pb-14 bg-gradient-to-b from-navy  to-reddish">
       <div className="lg:block lg:w-1/4">
         <Sidebar activeMenu="notifications" />
       </div>

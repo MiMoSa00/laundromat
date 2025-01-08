@@ -18,7 +18,7 @@ export default function Login() {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-navy to-reddish animate-gradient-flow">
 <div className="flex h-screen items-center justify-center">
-      <div className="w-full max-w-md p-8 space-y-6 bg-red-400 rounded shadow-md">
+      <div className="w-4/5 max-w-md p-8 space-y-6 bg-red-400 rounded shadow-md">
         <h2 className="text-2xl font-bold text-center">Login to Your Account</h2>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">

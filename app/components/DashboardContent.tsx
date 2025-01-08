@@ -18,7 +18,7 @@ export default function DashboardContent() {
     }, []);
 
     return (
-        <div className="min-h-screen w-full bg-gradient-to-b from-navy to-red-500 pb-40">
+        <div className="min-h-screen w-full bg-gradient-to-b from-navy to-reddish pb-40">
             <main className="p-4 sm:p-6 w-full">
                 <div className="max-w-7xl mx-auto w-full">
                     <motion.h1 

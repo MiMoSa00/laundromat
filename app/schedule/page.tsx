@@ -17,12 +17,12 @@ const Schedule: React.FC = () => {
   ];
 
   return (
-    <div className="flex pb-40 min-h-screen bg-gradient-to-b from-navy via-red-500 to-red-700">
-     
+    <div className="flex pb-40 min-h-screen bg-gradient-to-b from-navy  to-reddish">
+      <div className="hidden lg:block lg:w-1/4">
         <Sidebar activeMenu="schedule" />
-    
-      <div className="flex-1 p-6 lg:p-12 lg:w-3/4">
-        <div className="max-w-4xl mx-auto bg-white/5 rounded-lg shadow-lg p-6">
+      </div>
+      <div className="flex-1 p-6 lg:p-12  flex justify-center">
+        <div className="max-w-4xl w-full bg-white/5 rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-white mb-4">Schedule</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {schedules.map((schedule, index) => (

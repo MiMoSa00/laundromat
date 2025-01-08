@@ -18,12 +18,12 @@ const Profile: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-b from-navy via-red-500 to-red-700">
+    <div className="flex min-h-screen bg-gradient-to-b from-navy  to-reddish">
      
         <Sidebar activeMenu="profile" />
       
       <div className="flex-1 p-6 lg:p-12 lg:w-3/4">
-        <div className="max-w-2xl mx-auto bg-white/10 rounded-lg shadow-lg p-6">
+        <div className="max-w-2xl mx-auto  bg-white/10 rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-white mb-4">Profile</h2>
           <div className="mb-6">
             <label className="block text-cyan-100">Current Password</label>
