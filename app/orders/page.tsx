@@ -44,18 +44,6 @@ const currencySymbols = {
 }
 
 // Mock data - Replace with actual API calls
-const mockCurrentOrder: Order | null = {
-  id: 'ORD-2024-001',
-  status: 'processing',
-  items: [
-    { service: 'Wash & Fold', quantity: 5, price: 12.50 },
-    { service: 'Dry Cleaning', quantity: 2, price: 30.00 }
-  ],
-  totalAmount: 72.50,
-  date: '2024-01-20',
-  estimatedDelivery: '2024-01-22'
-}
-
 const mockPreviousOrders: Order[] = [
   {
     id: 'ORD-2023-123',
@@ -79,9 +67,13 @@ export default function OrdersPage() {
     const fetchOrders = async () => {
       setIsLoading(true)
       try {
+        // Retrieve current order from local storage
+        const storedOrder = localStorage.getItem('currentOrder');
+        if (storedOrder) {
+          setCurrentOrder(JSON.parse(storedOrder));
+        }
         // Replace with actual API calls
         await new Promise(resolve => setTimeout(resolve, 1000))
-        setCurrentOrder(mockCurrentOrder)
         setPreviousOrders(mockPreviousOrders)
       } catch (error) {
         console.error('Error fetching orders:', error)
@@ -122,11 +114,9 @@ export default function OrdersPage() {
     const converted = amount * currencyRates[selectedCurrency]
     
     if (selectedCurrency === 'NGN') {
-      // For NGN, round to whole numbers and add commas
       return `${currencySymbols[selectedCurrency]}${Math.round(converted).toLocaleString('en-US')}`
     }
     
-    // For other currencies, keep 2 decimal places
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: selectedCurrency,
@@ -156,12 +146,10 @@ export default function OrdersPage() {
       
       <div className="w-full lg:ml-64 p-4 sm:p-6 lg:p-8">
         <div className="max-w-7xl mx-auto">
-          {/* Currency Selector */}
           <div className="flex justify-end mb-6">
             <CurrencySelector />
           </div>
 
-          {/* Track Current Order Section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -183,7 +171,6 @@ export default function OrdersPage() {
                 className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/10"
               >
                 <div className="p-4 sm:p-6">
-                  {/* Order Header */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
                     <div>
                       <p className="text-white/70 text-sm">Order ID</p>
@@ -194,7 +181,6 @@ export default function OrdersPage() {
                     </span>
                   </div>
                   
-                  {/* Order Items */}
                   <div className="border-t border-white/10 py-4 my-4">
                     {currentOrder.items.map((item, index) => (
                       <div key={index} className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 last:mb-0">
@@ -207,7 +193,6 @@ export default function OrdersPage() {
                     ))}
                   </div>
                   
-                  {/* Order Footer */}
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                       <p className="text-white/70 text-sm">Estimated Delivery</p>
@@ -217,7 +202,6 @@ export default function OrdersPage() {
                   </div>
                 </div>
                 
-                {/* Progress Timeline */}
                 <div className="bg-white/5 px-4 sm:px-6 py-4">
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                     <div className="flex flex-col items-center">
@@ -251,7 +235,6 @@ export default function OrdersPage() {
             )}
           </motion.section>
 
-          {/* Previous Orders Section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

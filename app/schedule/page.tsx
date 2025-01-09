@@ -18,7 +18,7 @@ const Schedule: React.FC = () => {
 
   return (
     <div className="flex pb-40 min-h-screen bg-gradient-to-b from-navy  to-reddish">
-      <div className="hidden lg:block lg:w-1/4">
+      <div className="lg:block lg:w-1/4">
         <Sidebar activeMenu="schedule" />
       </div>
       <div className="flex-1 p-6 lg:p-12  flex justify-center">
