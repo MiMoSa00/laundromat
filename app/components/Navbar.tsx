@@ -159,28 +159,28 @@ const Navbar = () => {
             animate={{ height: '25vh' }}
             exit={{ height: 0 }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="absolute inset-x-0 top-full bg-gray-500 text-white z-40 overflow-y-auto"
+            className="absolute inset-x-0 top-full bg-blue-50 text-black z-40 overflow-y-auto"
             onMouseEnter={() => setIsDropdownOpen(true)}
           >
             <div className="grid grid-cols-2 p-0">
-              <Link href="/profile" className="hover:bg-navy p-2 lg:ml-40 rounded transition-colors">
+              <Link href="/profile" className="hover:bg-gray-500 p-2 lg:ml-40 rounded transition-colors">
                 <UserIcon className="w-5 h-5 mr-2 inline" />
                 Profile
               </Link>
-              <Link href="/schedule" className="hover:bg-navy p-2 rounded transition-colors">
+              <Link href="/schedule" className="hover:bg-gray-500 p-2 rounded transition-colors">
                 <CalendarIcon className="w-5 h-5 mr-2 inline" />
                 Schedule
               </Link>
-              <Link href="/notifications" className="hover:bg-navy lg:ml-40 p-2 rounded transition-colors">
+              <Link href="/notifications" className="hover:bg-gray-500 lg:ml-40 p-2 rounded transition-colors">
                 <BellIcon className="w-5 h-5 mr-2 inline" />
                 Notifications
               </Link>
-              <Link href="/help" className="hover:bg-navy p-2 rounded transition-colors">
+              <Link href="/help" className="hover:bg-gray-500 p-2 rounded transition-colors">
                 <QuestionMarkCircleIcon className="w-5 h-5 mr-2 inline" />
                 Help
               </Link>
               {(isLoggedIn || userName) && (
-                <div className="flex items-center lg:ml-40 p-4 rounded hover:bg-navy transition-colors">
+                <div className="flex items-center lg:ml-40 p-4 rounded hover:bg-gray-500 transition-colors">
                   <div className="w-10 h-10 rounded-full bg-burgundy-700 flex items-center justify-center">
                     <span className="text-white font-medium">
                       {userName ? userName.split(' ').map(n => n[0]).join('').toUpperCase() : 'U'}
@@ -188,7 +188,7 @@ const Navbar = () => {
                   </div>
                   <div className="ml-3">
                     <p className="font-medium">{userName || 'User'}</p>
-                    <p className="text-sm text-white">Premium Member</p>
+                    <p className="text-sm text-black">Premium Member</p>
                   </div>
                 </div>
               )}
