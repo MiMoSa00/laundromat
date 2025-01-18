@@ -133,22 +133,31 @@ const Navbar = () => {
             More
           </button> */}
         </div>
-        <nav className="flex items-center space-x-4">
-          {!isLoggedIn ? (
-            <a href="/login" className="hover:bg-white hover:text-black px-3 py-1 rounded transition-colors">
-              Log In
-            </a>
-          ) : (
-            <button onClick={handleSignOut} className="hover:bg-navy hover:text-white px-3 py-1 rounded transition-colors">
-              Log Out
-            </button>
-          )}
-          <Link href='/register'>
-            <button className="bg-navy text-white px-3 py-1 rounded transition-colors">
-              Sign up
-            </button>
-          </Link>
-        </nav>
+        <nav className="flex items-center space-x-2 sm:space-x-4">
+  {!isLoggedIn ? (
+    <a 
+      href="/login" 
+      className="text-xs sm:text-base hover:bg-white hover:text-black px-2 sm:px-3 py-1 rounded transition-colors whitespace-nowrap"
+    >
+      Log In
+    </a>
+  ) : (
+    <button 
+      onClick={handleSignOut} 
+      className="text-xs sm:text-base hover:bg-navy hover:text-white px-2 sm:px-3 py-1 rounded transition-colors whitespace-nowrap"
+    >
+      Log Out
+    </button>
+  )}
+  <Link href='/register'>
+    <button 
+      className="text-xs sm:text-base bg-navy text-white px-2 sm:px-3 py-1 rounded transition-colors whitespace-nowrap"
+    >
+      Sign up
+    </button>
+  </Link>
+</nav>
+
       </div>
 
       <AnimatePresence>
@@ -205,7 +214,7 @@ const Navbar = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ type: 'tween', duration: 0.9, ease: "easeInOut" }}
-            className="fixed inset-x-0 top-0 h-[50%] bg-gray-500 text-white z-40 overflow-y-auto"
+            className="fixed inset-x-0 top-0 h-[75%] bg-gray-500 text-white z-40 overflow-y-auto"
           >
             <div className="flex flex-col h-full p-4">
               <button onClick={toggleMobileMenu} className="self-end mb-4">
