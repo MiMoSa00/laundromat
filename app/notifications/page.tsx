@@ -1,7 +1,7 @@
 // pages/notifications.tsx
 "use client"
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 import { motion } from 'framer-motion';
 import Confetti from 'react-confetti';
 import { useWindowSize } from 'react-use';
@@ -19,7 +19,7 @@ const Notification: React.FC = () => {
   return (
     <div className="flex min-h-screen pb-14 bg-gradient-to-b from-navy  to-reddish">
       <div className="lg:block lg:w-1/4">
-        <Sidebar activeMenu="notifications" />
+        {/* <Sidebar activeMenu="notifications" /> */}
       </div>
       <div className="flex-1 p-6 lg:p-12 lg:ml-14 flex justify-center">
         <div className="max-w-4xl w-full bg-white/10 rounded-lg shadow-lg p-6">

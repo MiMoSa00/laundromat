@@ -9,7 +9,7 @@ import {
   CheckCircleIcon,
   XCircleIcon
 } from '@heroicons/react/24/outline'
-import Sidebar from '../components/Sidebar'
+// import Sidebar from '../components/Sidebar'
 
 // Types
 type Currency = 'USD' | 'NGN' | 'EUR' | 'GBP'
@@ -141,10 +141,10 @@ export default function OrdersPage() {
   )
 
   return (
-    <div className="flex flex-col pb-40 lg:flex-row min-h-screen bg-gradient-to-b from-navy to-reddish">
-      <Sidebar activeMenu="orders" />
+    <div className=" pb-40 min-h-screen bg-gradient-to-b from-navy to-reddish">
+      {/* <Sidebar activeMenu="orders" /> */}
       
-      <div className="w-full lg:ml-64 p-4 sm:p-6 lg:p-8">
+      <div className="w-full  p-4 sm:p-6 lg:p-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-end mb-6">
             <CurrencySelector />

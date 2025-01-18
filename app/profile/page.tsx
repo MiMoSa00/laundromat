@@ -1,7 +1,7 @@
 
 "use client"
 import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 
 const Profile: React.FC = () => {
   const [currentPassword, setCurrentPassword] = useState('');
@@ -20,7 +20,7 @@ const Profile: React.FC = () => {
   return (
     <div className="flex min-h-screen bg-gradient-to-b from-navy  to-reddish">
      
-        <Sidebar activeMenu="profile" />
+        {/* <Sidebar activeMenu="profile" /> */}
       
       <div className="flex-1 p-6 lg:p-12 lg:w-3/4">
         <div className="max-w-2xl mx-auto  bg-white/10 rounded-lg shadow-lg p-6">

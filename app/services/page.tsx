@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { CurrencyDollarIcon, ClockIcon, TruckIcon } from '@heroicons/react/24/outline'
-import Sidebar from '../components/Sidebar'
+// import Sidebar from '../components/Sidebar'
 import { useRouter } from 'next/navigation'
 
 // Define service types and currencies
@@ -177,9 +177,9 @@ export default function ServicesPage() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen">
-      <Sidebar activeMenu="services" />
-      <div className="w-full lg:ml-64">
+    <div className="w-full min-h-screen">
+      {/* <Sidebar activeMenu="services" /> */}
+      <div className="w-full ">
         <div className="min-h-screen pb-20 bg-gradient-to-b from-navy to-reddish">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
             <motion.div

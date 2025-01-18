@@ -1,7 +1,7 @@
 // pages/schedule.tsx
 "use client"
 import React from 'react';
-import Sidebar from '../components/Sidebar';
+// import Sidebar from '../components/Sidebar';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -18,9 +18,7 @@ const Schedule: React.FC = () => {
 
   return (
     <div className="flex pb-40 min-h-screen bg-gradient-to-b from-navy  to-reddish">
-      <div className="lg:block lg:w-1/4">
-        <Sidebar activeMenu="schedule" />
-      </div>
+     
       <div className="flex-1 p-6 lg:p-12  flex justify-center">
         <div className="max-w-4xl w-full bg-white/5 rounded-lg shadow-lg p-6">
           <h2 className="text-2xl font-bold text-white mb-4">Schedule</h2>
